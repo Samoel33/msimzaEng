@@ -9,6 +9,10 @@ import {
 
 import {motion} from "framer-motion";
 import { usePathname } from 'next/navigation';
+
+
+
+
 export default function Navigation() {
     const [burgered,setBurger] = useState<boolean>(false);
 
@@ -43,20 +47,11 @@ const variantsList = {
   
 };
 const pathName = usePathname();
-//  const  isActive = (path:string)=>{
-//   pathName.split('/')
-//   console.log(pathName)
-//   if(pathName==='/'){ 
-//     return pathName===path
-//   }
-//   else{
-//      console.log(pathName===path);
-//      console.log(pathName.split('/')[2],path)
-//      pathName.split('/')[2]=== path
-//     console.log(pathName===path);
-//      //return  
-//   }
-//  }
+//const isActive = pathName.startsWith(`/Okuhle/${value}`);
+const isActive=(path:string)=>{
+  console.log(pathName,path)
+  return pathName === path
+}
   return (
     <>
     <nav className='flex justify-between items-center h-32  bg-gray-950 sticky top-0 right-0 z-20 '>
@@ -66,11 +61,12 @@ const pathName = usePathname();
     <ul className='lg:w-1/2 lg:flex justify-between items-center hidden'>
      {
       navigationList.map(({id,value})=>(
-        <li className={'h-20 p-5 flex justify-center items-center text-white'} key={id}>
-          <Link href={`/Okuhle/${value}`} key={id} className='text-xl font-bold text-white'>{value}</Link>
+        <li className={' h-20 p-5 flex justify-center items-center text-white'} key={id}>
+          <Link href={value} className={" h-20 p-5 flex justify-center items-center text-white"}>{value}</Link>
         </li>
-      ))
+        ))
      }
+    
     </ul>
     {burgered ? (
           <button className="w-20 lg:hidden" onClick={closeBurger} type='submit' name='menu'>
@@ -101,3 +97,4 @@ const pathName = usePathname();
     </>
   )
 }
+
