@@ -74,8 +74,8 @@ const pathName = usePathname();
         )}
     </nav>
     {burgered && (
-      <ul  animate={burgered ? "open" : "closed"}
-      variants={variants} className='absolute top-32 right-0 flex-col justify-between items-center lg:hidden z-10 bg-black w-full h-full'>
+      <ul  
+      className='absolute top-32 right-0 flex-col justify-between items-center lg:hidden z-10 bg-black w-full h-full'>
       
      {
         navigationList.map(({id,value})=>(
