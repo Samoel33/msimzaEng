@@ -62,7 +62,7 @@ const isActive=(path:string)=>{
      {
       navigationList.map(({id,value})=>(
         <li className={' h-20 p-5 flex justify-center items-center text-white'} key={id}>
-          <Link href={value} className={" h-20 p-5 flex justify-center items-center text-white"}>{value}</Link>
+          <Link href={`${value}`} className={" h-20 p-5 flex justify-center items-center text-white"}>{value}</Link>
         </li>
         ))
      }
@@ -85,7 +85,7 @@ const isActive=(path:string)=>{
      {
         navigationList.map(({id,value})=>(
           <motion.li variants={variantsList} initial="initial" whileInView="open" viewport={{once:true}} custom={id} className={'h-20 p-5 flex justify-center items-center text-white'} key={id}>
-            <Link href={`/Okuhle/${value}`} key={id} className='text-xl font-bold text-white' onClick={closeBurger}>{value}</Link>
+            <Link href={`${value}`} key={id} className='text-xl font-bold text-white' onClick={closeBurger}>{value}</Link>
           </motion.li>
         ))
       }
