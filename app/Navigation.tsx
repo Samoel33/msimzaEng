@@ -43,13 +43,20 @@ const variantsList = {
   
 };
 const pathName = usePathname();
- const  isActive = (path:string)=>{
-  pathName.split('/')
-  if(pathName==='/') return pathName===path
-  else{
-    return pathName.split('/')[2]=== path
-  }
- }
+//  const  isActive = (path:string)=>{
+//   pathName.split('/')
+//   console.log(pathName)
+//   if(pathName==='/'){ 
+//     return pathName===path
+//   }
+//   else{
+//      console.log(pathName===path);
+//      console.log(pathName.split('/')[2],path)
+//      pathName.split('/')[2]=== path
+//     console.log(pathName===path);
+//      //return  
+//   }
+//  }
   return (
     <>
     <nav className='flex justify-between items-center h-32  bg-gray-950 sticky top-0 right-0 z-20 '>
@@ -59,7 +66,7 @@ const pathName = usePathname();
     <ul className='lg:w-1/2 lg:flex justify-between items-center hidden'>
      {
       navigationList.map(({id,value})=>(
-        <li className={isActive(value)?'active h-20 p-5 flex justify-center items-center text-white':'h-20 p-5 flex justify-center items-center text-white'} key={id}>
+        <li className={'h-20 p-5 flex justify-center items-center text-white'} key={id}>
           <Link href={`/Okuhle/${value}`} key={id} className='text-xl font-bold text-white'>{value}</Link>
         </li>
       ))
@@ -81,7 +88,7 @@ const pathName = usePathname();
       
      {
         navigationList.map(({id,value})=>(
-          <motion.li variants={variantsList} initial="initial" whileInView="open" viewport={{once:true}} custom={id} className={isActive(value)?'active h-20 p-5 flex justify-center items-center text-white':'h-20 p-5 flex justify-center items-center text-white'} key={id}>
+          <motion.li variants={variantsList} initial="initial" whileInView="open" viewport={{once:true}} custom={id} className={'h-20 p-5 flex justify-center items-center text-white'} key={id}>
             <Link href={`/Okuhle/${value}`} key={id} className='text-xl font-bold text-white' onClick={closeBurger}>{value}</Link>
           </motion.li>
         ))
