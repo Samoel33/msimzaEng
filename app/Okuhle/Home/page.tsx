@@ -1,14 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
+'use client'
+import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
-import dynamic from 'next/dynamic';
-
-const HomeComponent= dynamic(() => import('../../../Components/Home'), { ssr: false });
-export default function Home() {
+import {motion, spring} from "framer-motion"
+export default function HomeComponent() {
   return (
-  <main className="flex-col lg:flex-row  lg:flex items-center justify-center lg:p-24 p-0 ">
+    <main className="flex-col lg:flex-row  lg:flex items-center justify-center lg:p-24 p-0 ">
      <div className='flex flex-col  justify-center gap-3 lg:w-1/2 w-full mb-2'>
-      <h1  className='lg:text-6xl text-4xl font-bold text-heading lg:mb-5 mb-2 '>Services You Can Trust, All the time.</h1>
+      <motion.h1 initial={{opacity:0, y:-40}} animate={{opacity:1,y:0, transition:{duration:0.8, type:spring}}} className='lg:text-6xl text-4xl font-bold text-heading lg:mb-5 mb-2 '>Services You Can Trust, All the time.</motion.h1>
       <p className='max-w-prose lg:text-2xl text-xl text-gray-300 lg:mb-5 mb-2'><span className='lg:text-3xl text-2xl font-bold text-heading mr-1'>Okuhle Msimza</span>is a specialized engineering firm dedicated to the commissioning, installation, and testing of Medium Voltage (MV) and Low Voltage (LV) switchgear systems</p>
       <Link href={`/Okuhle/AboutUs`} className='bg-heading h-10 w-32 flex justify-center items-center text-white text-xl font-bold rounded-md'>About Us</Link>
      </div>
