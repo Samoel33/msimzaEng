@@ -46,7 +46,9 @@ const pathName = usePathname();
  const  isActive = (path:string)=>{
   pathName.split('/')
   if(pathName==='/') return pathName===path
-  return pathName.split('/')[2]=== path
+  else{
+    return pathName.split('/')[2]=== path
+  }
  }
   return (
     <>
