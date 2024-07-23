@@ -7,7 +7,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
-
+import {motion} from "framer-motion";
 import { usePathname } from 'next/navigation';
 export default function Navigation() {
     const [burgered,setBurger] = useState<boolean>(false);
@@ -54,10 +54,10 @@ const pathName = usePathname();
     <div className='h-full w-60 lg:justify-center justify-start items-center flex'>
       <Link href="/" className='text-2xl font-bold text-heading2 flex justify-center items-center  lg:p-2 p-1 border-b-2 border-white'><span><GiBatteryPack className='text-white mr-2'/></span>OKUHLE</Link>
     </div>
-    <ul className='lg:flex justify-between items-center hidden'>
+    <ul className='lg:w-1/2 lg:flex justify-between items-center hidden'>
      {
       navigationList.map(({id,value})=>(
-        <li className={isActive(value)?'active h-20 p-5 flex justify-center items-center':'h-20 p-5 flex justify-center items-center'} key={id}>
+        <li className={isActive(value)?'active h-20 p-5 flex justify-center items-center text-white':'h-20 p-5 flex justify-center items-center text-white'} key={id}>
           <Link href={`/Okuhle/${value}`} key={id} className='text-xl font-bold text-white'>{value}</Link>
         </li>
       ))
@@ -74,18 +74,18 @@ const pathName = usePathname();
         )}
     </nav>
     {burgered && (
-      <ul  
-      className='absolute top-32 right-0 flex-col justify-between items-center lg:hidden z-10 bg-black w-full h-full'>
+      <motion.ul  animate={burgered ? "open" : "closed"}
+      variants={variants} className='absolute top-32 right-0 flex-col justify-between items-center lg:hidden z-10 bg-black w-full h-full'>
       
      {
         navigationList.map(({id,value})=>(
-          <li  className={isActive(value)?'active h-20 p-5 flex justify-center items-center':'h-20 p-5 flex justify-center items-center'} key={id}>
+          <motion.li variants={variantsList} initial="initial" whileInView="open" viewport={{once:true}} custom={id} className={isActive(value)?'active h-20 p-5 flex justify-center items-center text-white':'h-20 p-5 flex justify-center items-center text-white'} key={id}>
             <Link href={`/Okuhle/${value}`} key={id} className='text-xl font-bold text-white' onClick={closeBurger}>{value}</Link>
-          </li>
+          </motion.li>
         ))
       }
    
-    </ul>
+    </motion.ul>
     )
 
     }
