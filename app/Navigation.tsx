@@ -80,7 +80,7 @@ const isActive=(path:string)=>{
     </nav>
     {burgered && (
       <motion.ul  animate={burgered ? "open" : "closed"}
-      variants={variants} className='absolute top-32 right-0 flex-col justify-between items-center lg:hidden z-10 bg-black w-full h-full'>
+      variants={variants} className='absolute top-32 right-0 flex-col justify-between items-center lg:hidden z-10 bg-black w-full h-full sticky'>
       
      {
         navigationList.map(({id,value})=>(
