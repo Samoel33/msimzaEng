@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function HomeComponent() {
   return (
-    <main className="flex-col lg:flex-row  lg:flex items-center justify-center lg:p-24 p-0 ">
+    <main className="flex-col lg:flex-row  lg:flex items-center justify-center lg:p-24 p-0 overflow-y-hidden ">
      <div className='flex flex-col  justify-center gap-3 lg:w-1/2 w-full mb-2'>
       <h1  className='lg:text-6xl text-4xl font-bold text-heading lg:mb-5 mb-2 '>Services You Can Trust, All the time.</h1>
       <p className='max-w-prose lg:text-2xl text-xl text-gray-300 lg:mb-5 mb-2'><span className='lg:text-3xl text-2xl font-bold text-heading mr-1'>Okuhle Msimza</span>is a specialized engineering firm dedicated to the commissioning, installation, and testing of Medium Voltage (MV) and Low Voltage (LV) switchgear systems</p>
