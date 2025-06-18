@@ -109,7 +109,7 @@ export default function HomeComponent() {
                 </div>
                 <div className="flex lg:flex-row flex-col gap-2 w-full rounded-2xl overflow-hidden shadow-lg  border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                   <div className='lg:w-1/2 w-full h-full shadow-sm'>
-                  <Image src='/reliability.jpg' width={800} height={600} className='object-cover w-full h-auto' alt='Expertise'/>
+                  <Image src='/Reliability.jpg' width={800} height={600} className='object-cover w-full h-auto' alt='Expertise'/>
                   </div>
                   <div className="p-5 lg:w-1/2 w-full h-full flex flex-col justify-center items-start">
                   <h2 className="text-2xl font-bold text-paragraph mb-2 flex gap-2"> Reliability <FaHandSparkles className='size-10 text-[#c59da1]'/></h2>
