@@ -73,7 +73,7 @@ export default function ServicesComponent() {
               </ul>
         </motion.div>
         <div className='col-start-2 col-end-4 row-start-1 row-end-3 flex items-center justify-center w-[80%] h-[90%] rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 hidden lg:block'>
-          <Image width={800} height={600}  src="/switch-disconnector-manual-switching.jpg" alt="services" className='w-full h-full object-cover rounded-2xl shadow-lg md:invisible sm:invisible' />
+          <Image width={800} height={600}  src="/switch-disconnector-manual-switching.jpg" alt="services" className='w-full h-full object-cover rounded-2xl shadow-lg' />
         </div>
         <motion.div variants={varient} initial="init" whileInView="inView" viewport={{once:true}} custom={-30}  className="flex  flex-col gap-2 w-full rounded-2xl overflow-hidden shadow-lg  border border-gray-200 hover:shadow-xl transition-shadow duration-300 p-5">
             <h2 className='text-heading text-xl font-semibold mb-4'>Installation of MV and LV Switchgear</h2>
