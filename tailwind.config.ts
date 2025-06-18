@@ -13,9 +13,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      colors:{
-        "heading":"#8A4341",
-        "heading2":"#BA271C"
+      colors: {
+        heading: "#8A4341",        // deep reddish brown for headings
+        heading2: "#BA271C",       // accent red for emphasis
+        paragraph: "#5C3A36",      // darker tone for better contrast
+        bg: "#F5F3EF",             // soft warm gray background
+        border: "#D7C9C3",         // light muted brown for card borders
+        card: "#FCFAF9",           // slightly off-white card background
       }
     },
   },

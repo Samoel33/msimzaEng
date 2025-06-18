@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --heading-text:#8A4341;
+  --heading-text: #8a4341;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,18 +17,17 @@
   }
 }
 
-
-::-webkit-scrollbar{
-    width:1rem;
-    background-color: #000;
-  }
-  ::-webkit-scrollbar-thumb{
-    border-radius: 1rem;
-    background-color:var(--heading-text);
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--heading-text);
 }
 body {
   /* color: rgb(var(--foreground-rgb)); */
-  background:#EFEEEA;
+  background: #efeeea;
 }
 
 @layer utilities {
@@ -36,32 +35,31 @@ body {
     text-wrap: balance;
   }
 }
-.contactUs{
-
-  color:var(--heading-text) !important;
+.contactUs {
+  color: var(--heading-text) !important;
 }
-nav ul li:last-child a{
-  color:var(--heading-text) !important;
+nav ul li:last-child a {
+  color: var(--heading-text) !important;
 }
-nav ul li:last-child.active{
-border-bottom:2px solid white!important;
+nav ul li:last-child.active {
+  border-bottom: 2px solid white !important;
 }
-.active{
-  border-bottom:2px solid brown;
+.active {
+  border-bottom: 2px solid brown;
 }
-.active::after{
-    z-index: 1;
-     /* background-color:rgba(21,56,76,0.7); */
-    position: absolute;
-    left:0;
-    content: " ";
-    width:100%;
-    height: 100%;
-    transition: width 0.8s ease-in-out;
-    will-change: transition;
-    animation: link 1s ease-in-out forwards 1;
+.active::after {
+  z-index: 1;
+  /* background-color:rgba(21,56,76,0.7); */
+  position: absolute;
+  left: 0;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  transition: width 0.8s ease-in-out;
+  will-change: transition;
+  animation: link 1s ease-in-out forwards 1;
 }
-.error{
-    color:red;
-    font-size:1.2rem;
+.error {
+  color: red;
+  font-size: 1.2rem;
 }

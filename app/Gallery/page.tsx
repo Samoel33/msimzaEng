@@ -1,7 +1,7 @@
 import React from 'react'
-
+import ComingSoon from '@/app/Components/ComingSoon'
 export default function Gallery() {
   return (
-    <div>Gallery</div>
+    <ComingSoon/>
   )
 }
