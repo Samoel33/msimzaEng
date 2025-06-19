@@ -13,9 +13,12 @@ export default function HomeComponent() {
     <main className='relative'>
     <div
   className="relative bg-cover bg-center bg-no-repeat h-[80vh] flex lg:items-center lg:pt-0 pt-12 items-start justify-center"
-  style={{ backgroundImage: "url('/lightd.jpg')" }}
+  
 >
-  <div className="absolute inset-0 bg-black/50 backdrop-blur-sm shadow-2xl z-0" />
+  <div className='absolute top-0 left-0 w-full h-[80vh] bg-gradient-to-b from-black to-transparent z-0'>
+    <Image src="/lightd.jpg" alt='backgroundPhoto' width={800} height={600} className='object-cover w-full h-full'/>
+    </div>
+  <div className="absolute inset-0 bg-black/50 backdrop-blur-sm shadow-2xl z-3" />
   <div className="relative z-10 flex flex-col justify-center gap-3 lg:w-1/2 w-full p-4">
     <motion.h1
       initial={{ opacity: 0, y: -40 }}

@@ -77,7 +77,6 @@ export default function ServicesComponent() {
         </div>
         <motion.div variants={varient} initial="init" whileInView="inView" viewport={{once:true}} custom={-30}  className="flex  flex-col gap-2 w-full rounded-2xl overflow-hidden shadow-lg  border border-gray-200 hover:shadow-xl transition-shadow duration-300 p-5">
             <h2 className='text-heading text-xl font-semibold mb-4'>Installation of MV and LV Switchgear</h2>
-          
             <ul className='w-full  '>
             {
                 Installationlist.map(({id,service})=>(
