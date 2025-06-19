@@ -15,6 +15,7 @@ export default function ContactUsComponent() {
   const {errors} = formState
   const form = useRef<HTMLFormElement>(null);
   const sendEmail= async(data:emailUs)=>{
+    console.log(data)
     reset();
   }
   return (

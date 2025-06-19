@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../../public/msimza.svg'
+import logo from '../public/mshimza.svg'
 export default function PageNotFound() {
   return (
     <div className='container flex flex-col'>
