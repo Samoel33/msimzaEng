@@ -15,7 +15,15 @@ export default function ContactUsComponent() {
   const {errors} = formState
   const form = useRef<HTMLFormElement>(null);
   const sendEmail= async(data:emailUs)=>{
-    console.log(data)
+    const infor = await fetch("/api/",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify(data)
+    })
+    const res = await infor.json()
+    console.log("infomations",res)
     reset();
   }
   return (
@@ -125,7 +133,7 @@ export default function ContactUsComponent() {
             </span>
           </div>
           <div className="w-full flex justify-start items-center lg:pl-3">
-            <input type="submit" value="Send Email" className="bg-white text-heading font-bold text-lg flex justify-center item-center rounded p-2 shadow-md cursor-pointer hover:shadow-lg hover:shadow-heading"/>
+            <input  type="submit" value="Send Email" className="bg-white text-heading font-bold text-lg flex justify-center item-center rounded p-2 shadow-md cursor-pointer hover:shadow-lg hover:shadow-heading"/>
           </div>
         </form>
       </div>
