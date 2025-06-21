@@ -1,4 +1,4 @@
-import type { Request } from 'next/server'
+
 import sendMessage from "../Utils/mail"
 export async function POST(request:Request) {
         const data = await request.json()
